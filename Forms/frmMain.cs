@@ -1,4 +1,14 @@
-﻿namespace Forms
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Forms
 {
     public partial class frmMain : Form
     {
@@ -7,27 +17,35 @@
             InitializeComponent();
         }
 
-        // Burası bir event
-        private void btonGoster_Click(object sender, EventArgs e)
+        private void btonExit_Click(object sender, EventArgs e)
         {
-            // ekrandan aldığı bilgileri bir mesaj kutusunda göstersin
-            string ad = tboxAd.Text; // içeriğini değişgene yükledim.
+            Application.Exit();
+        }
 
-            string soyad = tboxSoyad.Text;
-
-            MessageBox.Show($"Girmiş olduğunuz ad soyad bilgisi {ad} {soyad} dır...");
-
-            tboxAd.Clear(); // temizle
-            tboxSoyad.Clear();
-
-            tboxAd.Focus(); // tboxAd a odaklanıyorum.
-
+        private void frmMain_Load(object sender, EventArgs e)
+        {
 
         }
 
-        private void btonExit_Click(object sender, EventArgs e)
+        private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit(); // Programdan çıkar
+            Application.Exit();
+        }
+
+        private void frmSampleFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // İkinci bir form açmak istiyorum
+
+            frmSampleForm frmSampleForm = new frmSampleForm();
+
+            frmSampleForm.Show();
+        }
+
+        private void frmCoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCombo frmCombo = new frmCombo();
+
+            frmCombo.ShowDialog();
         }
     }
 }

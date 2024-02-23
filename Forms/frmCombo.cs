@@ -19,7 +19,7 @@ namespace Forms
 
         private void btonExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btonGoster_Click(object sender, EventArgs e)
