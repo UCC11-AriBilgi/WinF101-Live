@@ -34,7 +34,7 @@ namespace Forms
 
         private void frmCombo_Load(object sender, EventArgs e)
         {
-            cboxListe.SelectedIndex = 0;
+            cboxListe.SelectedIndex = 0; // ilk eleman gösterecek haline getirildi.
         }
     }
 }
