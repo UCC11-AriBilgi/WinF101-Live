@@ -47,5 +47,12 @@ namespace Forms
 
             frmCombo.ShowDialog();
         }
+
+        private void frmListBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListBox frmListBox = new frmListBox();
+
+            frmListBox.ShowDialog();
+        }
     }
 }

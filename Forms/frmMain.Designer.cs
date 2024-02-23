@@ -35,6 +35,7 @@
             frmCoToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             çıkışToolStripMenuItem = new ToolStripMenuItem();
+            frmListBoxToolStripMenuItem = new ToolStripMenuItem();
             menuMain.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             // 
             // programToolStripMenuItem
             // 
-            programToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { frmSampleFormToolStripMenuItem, frmCoToolStripMenuItem, toolStripSeparator1, çıkışToolStripMenuItem });
+            programToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { frmSampleFormToolStripMenuItem, frmCoToolStripMenuItem, frmListBoxToolStripMenuItem, toolStripSeparator1, çıkışToolStripMenuItem });
             programToolStripMenuItem.Name = "programToolStripMenuItem";
             programToolStripMenuItem.Size = new Size(80, 24);
             programToolStripMenuItem.Text = "Program";
@@ -92,6 +93,13 @@
             çıkışToolStripMenuItem.Text = "Çıkış";
             çıkışToolStripMenuItem.Click += çıkışToolStripMenuItem_Click;
             // 
+            // frmListBoxToolStripMenuItem
+            // 
+            frmListBoxToolStripMenuItem.Name = "frmListBoxToolStripMenuItem";
+            frmListBoxToolStripMenuItem.Size = new Size(224, 26);
+            frmListBoxToolStripMenuItem.Text = "frmListBox";
+            frmListBoxToolStripMenuItem.Click += frmListBoxToolStripMenuItem_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -120,5 +128,6 @@
         private ToolStripMenuItem frmCoToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem çıkışToolStripMenuItem;
+        private ToolStripMenuItem frmListBoxToolStripMenuItem;
     }
 }
