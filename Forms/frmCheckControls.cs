@@ -12,6 +12,8 @@ namespace Forms
 {
     public partial class frmCheckControls : Form
     {
+        private RadioButton rb;
+
         public frmCheckControls()
         {
             InitializeComponent();
@@ -56,6 +58,21 @@ namespace Forms
                     lbelMessage.Text = "Ne checkbox1 ne de checkbox2 seçili..";
                 }
             }
+        }
+
+        private void RadioControl(object sender,EventArgs e)
+        {
+            rb=(RadioButton)sender;
+
+            if (rb.Checked == true)
+            {
+                lbelMessage.Text = rb.Name + " seçili";
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioControl(sender, e);
         }
     }
 }

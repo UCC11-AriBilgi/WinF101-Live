@@ -51,6 +51,7 @@
             this.btonExit.TabIndex = 0;
             this.btonExit.Text = "Çıkış";
             this.btonExit.UseVisualStyleBackColor = true;
+            this.btonExit.Click += new System.EventHandler(this.btonExit_Click);
             // 
             // menuMain
             // 
@@ -80,31 +81,32 @@
             // frmSampleFormToolStripMenuItem
             // 
             this.frmSampleFormToolStripMenuItem.Name = "frmSampleFormToolStripMenuItem";
-            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.frmSampleFormToolStripMenuItem.Text = "frmSampleForm";
             // 
             // frmCoToolStripMenuItem
             // 
             this.frmCoToolStripMenuItem.Name = "frmCoToolStripMenuItem";
-            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.frmCoToolStripMenuItem.Text = "frmCombo";
             // 
             // frmListBoxToolStripMenuItem
             // 
             this.frmListBoxToolStripMenuItem.Name = "frmListBoxToolStripMenuItem";
-            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.frmListBoxToolStripMenuItem.Text = "frmListBox";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
+            this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click_1);
             // 
             // kontrollerToolStripMenuItem
             // 
@@ -117,7 +119,7 @@
             // checkControlsToolStripMenuItem
             // 
             this.checkControlsToolStripMenuItem.Name = "checkControlsToolStripMenuItem";
-            this.checkControlsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkControlsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.checkControlsToolStripMenuItem.Text = "CheckControls";
             this.checkControlsToolStripMenuItem.Click += new System.EventHandler(this.checkControlsToolStripMenuItem_Click);
             // 

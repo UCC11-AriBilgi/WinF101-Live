@@ -61,5 +61,10 @@ namespace Forms
             
             frmCheckControls.ShowDialog();
         }
+
+        private void çıkışToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
