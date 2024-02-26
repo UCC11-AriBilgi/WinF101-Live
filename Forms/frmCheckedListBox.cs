@@ -42,9 +42,28 @@ namespace Forms
 
         }
 
+        private void CheckAyarla(bool checkState)
+        {
+            // checkState prm ile true/false
+            for (int i = 0; i < chlbDiller.Items.Count; i++)
+            {
+                chlbDiller.SetItemChecked(i, checkState);
+            }
+        }
+
         private void frmCheckedListBox_Load(object sender, EventArgs e)
         {
             lbelMessage.Visible = false;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckAyarla(true);
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckAyarla(false);
         }
     }
 }

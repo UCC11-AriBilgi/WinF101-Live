@@ -36,5 +36,31 @@ namespace Forms
         {
             cboxListe.SelectedIndex = 0; // ilk eleman gösterecek haline getirildi.
         }
+
+        private void cboxHangi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Öncelikle 2. comboyu bir temizliyorum. önceki duranları temizliyorum.
+            cboxSonuc.Items.Clear();
+            cboxSonuc.Text = "";
+
+            string secilen=(string)cboxHangi.SelectedItem; // combonun seçilen text i
+
+            if (secilen == "Haftanın Günleri")
+            {
+                // önce bir dizi yarat...manuel olarak içini doldur.
+                string[] gunler = { "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz" };
+
+                cboxSonuc.Items.AddRange(gunler); // Çoklu ekleme
+            }
+            else
+            {
+                // önce bir dizi yarat...manuel olarak içini doldur.
+                string[] yillar = { "2020", "2021", "2022", "2023", "2024", "2025", "2026" };
+
+                cboxSonuc.Items.AddRange(yillar);
+            }
+
+            cboxSonuc.SelectedIndex = 0; // ilk elemana konumlanma
+        }
     }
 }

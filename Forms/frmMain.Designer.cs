@@ -82,30 +82,33 @@
             // frmSampleFormToolStripMenuItem
             // 
             this.frmSampleFormToolStripMenuItem.Name = "frmSampleFormToolStripMenuItem";
-            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.frmSampleFormToolStripMenuItem.Text = "frmSampleForm";
+            this.frmSampleFormToolStripMenuItem.Click += new System.EventHandler(this.frmSampleFormToolStripMenuItem_Click);
             // 
             // frmCoToolStripMenuItem
             // 
             this.frmCoToolStripMenuItem.Name = "frmCoToolStripMenuItem";
-            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.frmCoToolStripMenuItem.Text = "frmCombo";
+            this.frmCoToolStripMenuItem.Click += new System.EventHandler(this.frmCoToolStripMenuItem_Click);
             // 
             // frmListBoxToolStripMenuItem
             // 
             this.frmListBoxToolStripMenuItem.Name = "frmListBoxToolStripMenuItem";
-            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.frmListBoxToolStripMenuItem.Text = "frmListBox";
+            this.frmListBoxToolStripMenuItem.Click += new System.EventHandler(this.frmListBoxToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click_1);
             // 

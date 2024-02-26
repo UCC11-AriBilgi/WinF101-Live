@@ -29,43 +29,83 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCombo));
-            cboxListe = new ComboBox();
-            btonGoster = new Button();
-            btonExit = new Button();
-            SuspendLayout();
+            this.cboxListe = new System.Windows.Forms.ComboBox();
+            this.btonGoster = new System.Windows.Forms.Button();
+            this.btonExit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboxHangi = new System.Windows.Forms.ComboBox();
+            this.cboxSonuc = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // cboxListe
             // 
-            cboxListe.FormattingEnabled = true;
-            cboxListe.Items.AddRange(new object[] { resources.GetString("cboxListe.Items"), resources.GetString("cboxListe.Items1"), resources.GetString("cboxListe.Items2"), resources.GetString("cboxListe.Items3"), resources.GetString("cboxListe.Items4"), resources.GetString("cboxListe.Items5") });
-            resources.ApplyResources(cboxListe, "cboxListe");
-            cboxListe.Name = "cboxListe";
+            this.cboxListe.FormattingEnabled = true;
+            this.cboxListe.Items.AddRange(new object[] {
+            resources.GetString("cboxListe.Items"),
+            resources.GetString("cboxListe.Items1"),
+            resources.GetString("cboxListe.Items2"),
+            resources.GetString("cboxListe.Items3"),
+            resources.GetString("cboxListe.Items4"),
+            resources.GetString("cboxListe.Items5")});
+            resources.ApplyResources(this.cboxListe, "cboxListe");
+            this.cboxListe.Name = "cboxListe";
             // 
             // btonGoster
             // 
-            resources.ApplyResources(btonGoster, "btonGoster");
-            btonGoster.Name = "btonGoster";
-            btonGoster.UseVisualStyleBackColor = true;
-            btonGoster.Click += btonGoster_Click;
+            resources.ApplyResources(this.btonGoster, "btonGoster");
+            this.btonGoster.Name = "btonGoster";
+            this.btonGoster.UseVisualStyleBackColor = true;
             // 
             // btonExit
             // 
-            resources.ApplyResources(btonExit, "btonExit");
-            btonExit.Name = "btonExit";
-            btonExit.UseVisualStyleBackColor = true;
-            btonExit.Click += btonExit_Click;
+            resources.ApplyResources(this.btonExit, "btonExit");
+            this.btonExit.Name = "btonExit";
+            this.btonExit.UseVisualStyleBackColor = true;
+            this.btonExit.Click += new System.EventHandler(this.btonExit_Click);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // cboxHangi
+            // 
+            this.cboxHangi.FormattingEnabled = true;
+            this.cboxHangi.Items.AddRange(new object[] {
+            resources.GetString("cboxHangi.Items"),
+            resources.GetString("cboxHangi.Items1")});
+            resources.ApplyResources(this.cboxHangi, "cboxHangi");
+            this.cboxHangi.Name = "cboxHangi";
+            this.cboxHangi.SelectedIndexChanged += new System.EventHandler(this.cboxHangi_SelectedIndexChanged);
+            // 
+            // cboxSonuc
+            // 
+            this.cboxSonuc.FormattingEnabled = true;
+            resources.ApplyResources(this.cboxSonuc, "cboxSonuc");
+            this.cboxSonuc.Name = "cboxSonuc";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
             // 
             // frmCombo
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
-            ControlBox = false;
-            Controls.Add(btonExit);
-            Controls.Add(btonGoster);
-            Controls.Add(cboxListe);
-            Name = "frmCombo";
-            Load += frmCombo_Load;
-            ResumeLayout(false);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ControlBox = false;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cboxSonuc);
+            this.Controls.Add(this.cboxHangi);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btonExit);
+            this.Controls.Add(this.btonGoster);
+            this.Controls.Add(this.cboxListe);
+            this.Name = "frmCombo";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -73,5 +113,9 @@
         private ComboBox cboxListe;
         private Button btonGoster;
         private Button btonExit;
+        private Label label1;
+        private ComboBox cboxHangi;
+        private ComboBox cboxSonuc;
+        private Label label2;
     }
 }
