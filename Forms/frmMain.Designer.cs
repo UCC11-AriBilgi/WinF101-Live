@@ -28,95 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btonExit = new Button();
-            menuMain = new MenuStrip();
-            programToolStripMenuItem = new ToolStripMenuItem();
-            frmSampleFormToolStripMenuItem = new ToolStripMenuItem();
-            frmCoToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator1 = new ToolStripSeparator();
-            çıkışToolStripMenuItem = new ToolStripMenuItem();
-            frmListBoxToolStripMenuItem = new ToolStripMenuItem();
-            menuMain.SuspendLayout();
-            SuspendLayout();
+            this.btonExit = new System.Windows.Forms.Button();
+            this.menuMain = new System.Windows.Forms.MenuStrip();
+            this.programToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmSampleFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmCoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kontrollerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMain.SuspendLayout();
+            this.SuspendLayout();
             // 
             // btonExit
             // 
-            btonExit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btonExit.Location = new Point(682, 439);
-            btonExit.Name = "btonExit";
-            btonExit.Size = new Size(94, 29);
-            btonExit.TabIndex = 0;
-            btonExit.Text = "Çıkış";
-            btonExit.UseVisualStyleBackColor = true;
-            btonExit.Click += btonExit_Click;
+            this.btonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btonExit.Location = new System.Drawing.Point(597, 329);
+            this.btonExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btonExit.Name = "btonExit";
+            this.btonExit.Size = new System.Drawing.Size(82, 22);
+            this.btonExit.TabIndex = 0;
+            this.btonExit.Text = "Çıkış";
+            this.btonExit.UseVisualStyleBackColor = true;
             // 
             // menuMain
             // 
-            menuMain.ImageScalingSize = new Size(20, 20);
-            menuMain.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem });
-            menuMain.Location = new Point(0, 0);
-            menuMain.Name = "menuMain";
-            menuMain.Size = new Size(795, 28);
-            menuMain.TabIndex = 1;
-            menuMain.Text = "menuStrip1";
+            this.menuMain.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.programToolStripMenuItem,
+            this.kontrollerToolStripMenuItem});
+            this.menuMain.Location = new System.Drawing.Point(0, 0);
+            this.menuMain.Name = "menuMain";
+            this.menuMain.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuMain.Size = new System.Drawing.Size(696, 24);
+            this.menuMain.TabIndex = 1;
+            this.menuMain.Text = "menuStrip1";
             // 
             // programToolStripMenuItem
             // 
-            programToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { frmSampleFormToolStripMenuItem, frmCoToolStripMenuItem, frmListBoxToolStripMenuItem, toolStripSeparator1, çıkışToolStripMenuItem });
-            programToolStripMenuItem.Name = "programToolStripMenuItem";
-            programToolStripMenuItem.Size = new Size(80, 24);
-            programToolStripMenuItem.Text = "Program";
+            this.programToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.frmSampleFormToolStripMenuItem,
+            this.frmCoToolStripMenuItem,
+            this.frmListBoxToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.çıkışToolStripMenuItem});
+            this.programToolStripMenuItem.Name = "programToolStripMenuItem";
+            this.programToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.programToolStripMenuItem.Text = "Program";
             // 
             // frmSampleFormToolStripMenuItem
             // 
-            frmSampleFormToolStripMenuItem.Name = "frmSampleFormToolStripMenuItem";
-            frmSampleFormToolStripMenuItem.Size = new Size(224, 26);
-            frmSampleFormToolStripMenuItem.Text = "frmSampleForm";
-            frmSampleFormToolStripMenuItem.Click += frmSampleFormToolStripMenuItem_Click;
+            this.frmSampleFormToolStripMenuItem.Name = "frmSampleFormToolStripMenuItem";
+            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.frmSampleFormToolStripMenuItem.Text = "frmSampleForm";
             // 
             // frmCoToolStripMenuItem
             // 
-            frmCoToolStripMenuItem.Name = "frmCoToolStripMenuItem";
-            frmCoToolStripMenuItem.Size = new Size(224, 26);
-            frmCoToolStripMenuItem.Text = "frmCombo";
-            frmCoToolStripMenuItem.Click += frmCoToolStripMenuItem_Click;
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(221, 6);
-            // 
-            // çıkışToolStripMenuItem
-            // 
-            çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            çıkışToolStripMenuItem.Size = new Size(224, 26);
-            çıkışToolStripMenuItem.Text = "Çıkış";
-            çıkışToolStripMenuItem.Click += çıkışToolStripMenuItem_Click;
+            this.frmCoToolStripMenuItem.Name = "frmCoToolStripMenuItem";
+            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.frmCoToolStripMenuItem.Text = "frmCombo";
             // 
             // frmListBoxToolStripMenuItem
             // 
-            frmListBoxToolStripMenuItem.Name = "frmListBoxToolStripMenuItem";
-            frmListBoxToolStripMenuItem.Size = new Size(224, 26);
-            frmListBoxToolStripMenuItem.Text = "frmListBox";
-            frmListBoxToolStripMenuItem.Click += frmListBoxToolStripMenuItem_Click;
+            this.frmListBoxToolStripMenuItem.Name = "frmListBoxToolStripMenuItem";
+            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.frmListBoxToolStripMenuItem.Text = "frmListBox";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            // 
+            // çıkışToolStripMenuItem
+            // 
+            this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.çıkışToolStripMenuItem.Text = "Çıkış";
+            // 
+            // kontrollerToolStripMenuItem
+            // 
+            this.kontrollerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkControlsToolStripMenuItem});
+            this.kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
+            this.kontrollerToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.kontrollerToolStripMenuItem.Text = "Kontroller";
+            // 
+            // checkControlsToolStripMenuItem
+            // 
+            this.checkControlsToolStripMenuItem.Name = "checkControlsToolStripMenuItem";
+            this.checkControlsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkControlsToolStripMenuItem.Text = "CheckControls";
+            this.checkControlsToolStripMenuItem.Click += new System.EventHandler(this.checkControlsToolStripMenuItem_Click);
             // 
             // frmMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(795, 481);
-            ControlBox = false;
-            Controls.Add(btonExit);
-            Controls.Add(menuMain);
-            MainMenuStrip = menuMain;
-            Name = "frmMain";
-            Text = "Main Form";
-            WindowState = FormWindowState.Maximized;
-            Load += frmMain_Load;
-            menuMain.ResumeLayout(false);
-            menuMain.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(696, 361);
+            this.ControlBox = false;
+            this.Controls.Add(this.btonExit);
+            this.Controls.Add(this.menuMain);
+            this.MainMenuStrip = this.menuMain;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "frmMain";
+            this.Text = "Main Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.menuMain.ResumeLayout(false);
+            this.menuMain.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -129,5 +151,7 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem çıkışToolStripMenuItem;
         private ToolStripMenuItem frmListBoxToolStripMenuItem;
+        private ToolStripMenuItem kontrollerToolStripMenuItem;
+        private ToolStripMenuItem checkControlsToolStripMenuItem;
     }
 }

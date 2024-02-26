@@ -54,5 +54,12 @@ namespace Forms
 
             frmListBox.ShowDialog();
         }
+
+        private void checkControlsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCheckControls frmCheckControls = new frmCheckControls();
+            
+            frmCheckControls.ShowDialog();
+        }
     }
 }
