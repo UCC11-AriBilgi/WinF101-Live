@@ -40,6 +40,7 @@
             this.checkControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkedListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateTimePickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,33 +84,33 @@
             // frmSampleFormToolStripMenuItem
             // 
             this.frmSampleFormToolStripMenuItem.Name = "frmSampleFormToolStripMenuItem";
-            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.frmSampleFormToolStripMenuItem.Text = "frmSampleForm";
             this.frmSampleFormToolStripMenuItem.Click += new System.EventHandler(this.frmSampleFormToolStripMenuItem_Click);
             // 
             // frmCoToolStripMenuItem
             // 
             this.frmCoToolStripMenuItem.Name = "frmCoToolStripMenuItem";
-            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.frmCoToolStripMenuItem.Text = "frmCombo";
             this.frmCoToolStripMenuItem.Click += new System.EventHandler(this.frmCoToolStripMenuItem_Click);
             // 
             // frmListBoxToolStripMenuItem
             // 
             this.frmListBoxToolStripMenuItem.Name = "frmListBoxToolStripMenuItem";
-            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.frmListBoxToolStripMenuItem.Text = "frmListBox";
             this.frmListBoxToolStripMenuItem.Click += new System.EventHandler(this.frmListBoxToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click_1);
             // 
@@ -118,7 +119,8 @@
             this.kontrollerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkControlsToolStripMenuItem,
             this.checkedListBoxToolStripMenuItem,
-            this.dateTimePickerToolStripMenuItem});
+            this.dateTimePickerToolStripMenuItem,
+            this.timerToolStripMenuItem});
             this.kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
             this.kontrollerToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.kontrollerToolStripMenuItem.Text = "Kontroller";
@@ -143,6 +145,13 @@
             this.dateTimePickerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dateTimePickerToolStripMenuItem.Text = "DateTimePicker";
             this.dateTimePickerToolStripMenuItem.Click += new System.EventHandler(this.dateTimePickerToolStripMenuItem_Click);
+            // 
+            // timerToolStripMenuItem
+            // 
+            this.timerToolStripMenuItem.Name = "timerToolStripMenuItem";
+            this.timerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.timerToolStripMenuItem.Text = "Timer";
+            this.timerToolStripMenuItem.Click += new System.EventHandler(this.timerToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -178,5 +187,6 @@
         private ToolStripMenuItem checkControlsToolStripMenuItem;
         private ToolStripMenuItem checkedListBoxToolStripMenuItem;
         private ToolStripMenuItem dateTimePickerToolStripMenuItem;
+        private ToolStripMenuItem timerToolStripMenuItem;
     }
 }
