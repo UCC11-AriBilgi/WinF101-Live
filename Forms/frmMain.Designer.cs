@@ -38,6 +38,7 @@
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontrollerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkedListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,37 +82,38 @@
             // frmSampleFormToolStripMenuItem
             // 
             this.frmSampleFormToolStripMenuItem.Name = "frmSampleFormToolStripMenuItem";
-            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.frmSampleFormToolStripMenuItem.Text = "frmSampleForm";
             // 
             // frmCoToolStripMenuItem
             // 
             this.frmCoToolStripMenuItem.Name = "frmCoToolStripMenuItem";
-            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.frmCoToolStripMenuItem.Text = "frmCombo";
             // 
             // frmListBoxToolStripMenuItem
             // 
             this.frmListBoxToolStripMenuItem.Name = "frmListBoxToolStripMenuItem";
-            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.frmListBoxToolStripMenuItem.Text = "frmListBox";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click_1);
             // 
             // kontrollerToolStripMenuItem
             // 
             this.kontrollerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkControlsToolStripMenuItem});
+            this.checkControlsToolStripMenuItem,
+            this.checkedListBoxToolStripMenuItem});
             this.kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
             this.kontrollerToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.kontrollerToolStripMenuItem.Text = "Kontroller";
@@ -119,9 +121,16 @@
             // checkControlsToolStripMenuItem
             // 
             this.checkControlsToolStripMenuItem.Name = "checkControlsToolStripMenuItem";
-            this.checkControlsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.checkControlsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.checkControlsToolStripMenuItem.Text = "CheckControls";
             this.checkControlsToolStripMenuItem.Click += new System.EventHandler(this.checkControlsToolStripMenuItem_Click);
+            // 
+            // checkedListBoxToolStripMenuItem
+            // 
+            this.checkedListBoxToolStripMenuItem.Name = "checkedListBoxToolStripMenuItem";
+            this.checkedListBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkedListBoxToolStripMenuItem.Text = "CheckedListBox";
+            this.checkedListBoxToolStripMenuItem.Click += new System.EventHandler(this.checkedListBoxToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -155,5 +164,6 @@
         private ToolStripMenuItem frmListBoxToolStripMenuItem;
         private ToolStripMenuItem kontrollerToolStripMenuItem;
         private ToolStripMenuItem checkControlsToolStripMenuItem;
+        private ToolStripMenuItem checkedListBoxToolStripMenuItem;
     }
 }

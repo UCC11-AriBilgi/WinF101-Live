@@ -66,5 +66,12 @@ namespace Forms
         {
             Application.Exit();
         }
+
+        private void checkedListBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCheckedListBox frmCheckedListBox=new frmCheckedListBox();
+
+            frmCheckedListBox.ShowDialog();
+        }
     }
 }
