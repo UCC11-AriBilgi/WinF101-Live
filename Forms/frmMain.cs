@@ -73,5 +73,12 @@ namespace Forms
 
             frmCheckedListBox.ShowDialog();
         }
+
+        private void dateTimePickerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDateTimePicker frmDateTimePicker=new frmDateTimePicker();
+
+            frmDateTimePicker.ShowDialog();
+        }
     }
 }

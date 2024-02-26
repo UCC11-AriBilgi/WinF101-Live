@@ -39,6 +39,7 @@
             this.kontrollerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkedListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateTimePickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,7 +117,8 @@
             // 
             this.kontrollerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkControlsToolStripMenuItem,
-            this.checkedListBoxToolStripMenuItem});
+            this.checkedListBoxToolStripMenuItem,
+            this.dateTimePickerToolStripMenuItem});
             this.kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
             this.kontrollerToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.kontrollerToolStripMenuItem.Text = "Kontroller";
@@ -134,6 +136,13 @@
             this.checkedListBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.checkedListBoxToolStripMenuItem.Text = "CheckedListBox";
             this.checkedListBoxToolStripMenuItem.Click += new System.EventHandler(this.checkedListBoxToolStripMenuItem_Click);
+            // 
+            // dateTimePickerToolStripMenuItem
+            // 
+            this.dateTimePickerToolStripMenuItem.Name = "dateTimePickerToolStripMenuItem";
+            this.dateTimePickerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dateTimePickerToolStripMenuItem.Text = "DateTimePicker";
+            this.dateTimePickerToolStripMenuItem.Click += new System.EventHandler(this.dateTimePickerToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -168,5 +177,6 @@
         private ToolStripMenuItem kontrollerToolStripMenuItem;
         private ToolStripMenuItem checkControlsToolStripMenuItem;
         private ToolStripMenuItem checkedListBoxToolStripMenuItem;
+        private ToolStripMenuItem dateTimePickerToolStripMenuItem;
     }
 }
