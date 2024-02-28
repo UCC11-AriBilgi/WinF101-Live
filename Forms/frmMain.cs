@@ -58,7 +58,7 @@ namespace Forms
         private void checkControlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCheckControls frmCheckControls = new frmCheckControls();
-            
+
             frmCheckControls.ShowDialog();
         }
 
@@ -69,14 +69,14 @@ namespace Forms
 
         private void checkedListBoxToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCheckedListBox frmCheckedListBox=new frmCheckedListBox();
+            frmCheckedListBox frmCheckedListBox = new frmCheckedListBox();
 
             frmCheckedListBox.ShowDialog();
         }
 
         private void dateTimePickerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDateTimePicker frmDateTimePicker=new frmDateTimePicker();
+            frmDateTimePicker frmDateTimePicker = new frmDateTimePicker();
 
             frmDateTimePicker.ShowDialog();
         }
@@ -86,6 +86,13 @@ namespace Forms
             frmTimer frmTimer = new frmTimer();
 
             frmTimer.ShowDialog();
+        }
+
+        private void numericUpDownToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNumericUD frmNumericUD = new frmNumericUD();
+
+            frmNumericUD.ShowDialog();
         }
     }
 }

@@ -28,149 +28,145 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btonExit = new System.Windows.Forms.Button();
-            this.menuMain = new System.Windows.Forms.MenuStrip();
-            this.programToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.frmSampleFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.frmCoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.frmListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kontrollerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkedListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateTimePickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuMain.SuspendLayout();
-            this.SuspendLayout();
+            btonExit = new Button();
+            menuMain = new MenuStrip();
+            programToolStripMenuItem = new ToolStripMenuItem();
+            frmSampleFormToolStripMenuItem = new ToolStripMenuItem();
+            frmCoToolStripMenuItem = new ToolStripMenuItem();
+            frmListBoxToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            çıkışToolStripMenuItem = new ToolStripMenuItem();
+            kontrollerToolStripMenuItem = new ToolStripMenuItem();
+            checkControlsToolStripMenuItem = new ToolStripMenuItem();
+            checkedListBoxToolStripMenuItem = new ToolStripMenuItem();
+            dateTimePickerToolStripMenuItem = new ToolStripMenuItem();
+            timerToolStripMenuItem = new ToolStripMenuItem();
+            numericUpDownToolStripMenuItem = new ToolStripMenuItem();
+            menuMain.SuspendLayout();
+            SuspendLayout();
             // 
             // btonExit
             // 
-            this.btonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btonExit.Location = new System.Drawing.Point(597, 329);
-            this.btonExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btonExit.Name = "btonExit";
-            this.btonExit.Size = new System.Drawing.Size(82, 22);
-            this.btonExit.TabIndex = 0;
-            this.btonExit.Text = "Çıkış";
-            this.btonExit.UseVisualStyleBackColor = true;
-            this.btonExit.Click += new System.EventHandler(this.btonExit_Click);
+            btonExit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btonExit.Location = new Point(597, 329);
+            btonExit.Margin = new Padding(3, 2, 3, 2);
+            btonExit.Name = "btonExit";
+            btonExit.Size = new Size(82, 22);
+            btonExit.TabIndex = 0;
+            btonExit.Text = "Çıkış";
+            btonExit.UseVisualStyleBackColor = true;
+            btonExit.Click += btonExit_Click;
             // 
             // menuMain
             // 
-            this.menuMain.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.programToolStripMenuItem,
-            this.kontrollerToolStripMenuItem});
-            this.menuMain.Location = new System.Drawing.Point(0, 0);
-            this.menuMain.Name = "menuMain";
-            this.menuMain.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuMain.Size = new System.Drawing.Size(696, 24);
-            this.menuMain.TabIndex = 1;
-            this.menuMain.Text = "menuStrip1";
+            menuMain.ImageScalingSize = new Size(20, 20);
+            menuMain.Items.AddRange(new ToolStripItem[] { programToolStripMenuItem, kontrollerToolStripMenuItem });
+            menuMain.Location = new Point(0, 0);
+            menuMain.Name = "menuMain";
+            menuMain.Padding = new Padding(5, 2, 0, 2);
+            menuMain.Size = new Size(696, 24);
+            menuMain.TabIndex = 1;
+            menuMain.Text = "menuStrip1";
             // 
             // programToolStripMenuItem
             // 
-            this.programToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.frmSampleFormToolStripMenuItem,
-            this.frmCoToolStripMenuItem,
-            this.frmListBoxToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.çıkışToolStripMenuItem});
-            this.programToolStripMenuItem.Name = "programToolStripMenuItem";
-            this.programToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.programToolStripMenuItem.Text = "Program";
+            programToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { frmSampleFormToolStripMenuItem, frmCoToolStripMenuItem, frmListBoxToolStripMenuItem, toolStripSeparator1, çıkışToolStripMenuItem });
+            programToolStripMenuItem.Name = "programToolStripMenuItem";
+            programToolStripMenuItem.Size = new Size(65, 20);
+            programToolStripMenuItem.Text = "Program";
             // 
             // frmSampleFormToolStripMenuItem
             // 
-            this.frmSampleFormToolStripMenuItem.Name = "frmSampleFormToolStripMenuItem";
-            this.frmSampleFormToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.frmSampleFormToolStripMenuItem.Text = "frmSampleForm";
-            this.frmSampleFormToolStripMenuItem.Click += new System.EventHandler(this.frmSampleFormToolStripMenuItem_Click);
+            frmSampleFormToolStripMenuItem.Name = "frmSampleFormToolStripMenuItem";
+            frmSampleFormToolStripMenuItem.Size = new Size(160, 22);
+            frmSampleFormToolStripMenuItem.Text = "frmSampleForm";
+            frmSampleFormToolStripMenuItem.Click += frmSampleFormToolStripMenuItem_Click;
             // 
             // frmCoToolStripMenuItem
             // 
-            this.frmCoToolStripMenuItem.Name = "frmCoToolStripMenuItem";
-            this.frmCoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.frmCoToolStripMenuItem.Text = "frmCombo";
-            this.frmCoToolStripMenuItem.Click += new System.EventHandler(this.frmCoToolStripMenuItem_Click);
+            frmCoToolStripMenuItem.Name = "frmCoToolStripMenuItem";
+            frmCoToolStripMenuItem.Size = new Size(160, 22);
+            frmCoToolStripMenuItem.Text = "frmCombo";
+            frmCoToolStripMenuItem.Click += frmCoToolStripMenuItem_Click;
             // 
             // frmListBoxToolStripMenuItem
             // 
-            this.frmListBoxToolStripMenuItem.Name = "frmListBoxToolStripMenuItem";
-            this.frmListBoxToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.frmListBoxToolStripMenuItem.Text = "frmListBox";
-            this.frmListBoxToolStripMenuItem.Click += new System.EventHandler(this.frmListBoxToolStripMenuItem_Click);
+            frmListBoxToolStripMenuItem.Name = "frmListBoxToolStripMenuItem";
+            frmListBoxToolStripMenuItem.Size = new Size(160, 22);
+            frmListBoxToolStripMenuItem.Text = "frmListBox";
+            frmListBoxToolStripMenuItem.Click += frmListBoxToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(157, 6);
             // 
             // çıkışToolStripMenuItem
             // 
-            this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.çıkışToolStripMenuItem.Text = "Çıkış";
-            this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click_1);
+            çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
+            çıkışToolStripMenuItem.Size = new Size(160, 22);
+            çıkışToolStripMenuItem.Text = "Çıkış";
+            çıkışToolStripMenuItem.Click += çıkışToolStripMenuItem_Click_1;
             // 
             // kontrollerToolStripMenuItem
             // 
-            this.kontrollerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkControlsToolStripMenuItem,
-            this.checkedListBoxToolStripMenuItem,
-            this.dateTimePickerToolStripMenuItem,
-            this.timerToolStripMenuItem});
-            this.kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
-            this.kontrollerToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.kontrollerToolStripMenuItem.Text = "Kontroller";
+            kontrollerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkControlsToolStripMenuItem, checkedListBoxToolStripMenuItem, dateTimePickerToolStripMenuItem, timerToolStripMenuItem, numericUpDownToolStripMenuItem });
+            kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
+            kontrollerToolStripMenuItem.Size = new Size(71, 20);
+            kontrollerToolStripMenuItem.Text = "Kontroller";
             // 
             // checkControlsToolStripMenuItem
             // 
-            this.checkControlsToolStripMenuItem.Name = "checkControlsToolStripMenuItem";
-            this.checkControlsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.checkControlsToolStripMenuItem.Text = "CheckControls";
-            this.checkControlsToolStripMenuItem.Click += new System.EventHandler(this.checkControlsToolStripMenuItem_Click);
+            checkControlsToolStripMenuItem.Name = "checkControlsToolStripMenuItem";
+            checkControlsToolStripMenuItem.Size = new Size(180, 22);
+            checkControlsToolStripMenuItem.Text = "CheckControls";
+            checkControlsToolStripMenuItem.Click += checkControlsToolStripMenuItem_Click;
             // 
             // checkedListBoxToolStripMenuItem
             // 
-            this.checkedListBoxToolStripMenuItem.Name = "checkedListBoxToolStripMenuItem";
-            this.checkedListBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.checkedListBoxToolStripMenuItem.Text = "CheckedListBox";
-            this.checkedListBoxToolStripMenuItem.Click += new System.EventHandler(this.checkedListBoxToolStripMenuItem_Click);
+            checkedListBoxToolStripMenuItem.Name = "checkedListBoxToolStripMenuItem";
+            checkedListBoxToolStripMenuItem.Size = new Size(180, 22);
+            checkedListBoxToolStripMenuItem.Text = "CheckedListBox";
+            checkedListBoxToolStripMenuItem.Click += checkedListBoxToolStripMenuItem_Click;
             // 
             // dateTimePickerToolStripMenuItem
             // 
-            this.dateTimePickerToolStripMenuItem.Name = "dateTimePickerToolStripMenuItem";
-            this.dateTimePickerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dateTimePickerToolStripMenuItem.Text = "DateTimePicker";
-            this.dateTimePickerToolStripMenuItem.Click += new System.EventHandler(this.dateTimePickerToolStripMenuItem_Click);
+            dateTimePickerToolStripMenuItem.Name = "dateTimePickerToolStripMenuItem";
+            dateTimePickerToolStripMenuItem.Size = new Size(180, 22);
+            dateTimePickerToolStripMenuItem.Text = "DateTimePicker";
+            dateTimePickerToolStripMenuItem.Click += dateTimePickerToolStripMenuItem_Click;
             // 
             // timerToolStripMenuItem
             // 
-            this.timerToolStripMenuItem.Name = "timerToolStripMenuItem";
-            this.timerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.timerToolStripMenuItem.Text = "Timer";
-            this.timerToolStripMenuItem.Click += new System.EventHandler(this.timerToolStripMenuItem_Click);
+            timerToolStripMenuItem.Name = "timerToolStripMenuItem";
+            timerToolStripMenuItem.Size = new Size(180, 22);
+            timerToolStripMenuItem.Text = "Timer";
+            timerToolStripMenuItem.Click += timerToolStripMenuItem_Click;
+            // 
+            // numericUpDownToolStripMenuItem
+            // 
+            numericUpDownToolStripMenuItem.Name = "numericUpDownToolStripMenuItem";
+            numericUpDownToolStripMenuItem.Size = new Size(180, 22);
+            numericUpDownToolStripMenuItem.Text = "NumericUpDown";
+            numericUpDownToolStripMenuItem.Click += numericUpDownToolStripMenuItem_Click;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 361);
-            this.ControlBox = false;
-            this.Controls.Add(this.btonExit);
-            this.Controls.Add(this.menuMain);
-            this.MainMenuStrip = this.menuMain;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmMain";
-            this.Text = "Main Form";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.menuMain.ResumeLayout(false);
-            this.menuMain.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(696, 361);
+            ControlBox = false;
+            Controls.Add(btonExit);
+            Controls.Add(menuMain);
+            MainMenuStrip = menuMain;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "frmMain";
+            Text = "Main Form";
+            WindowState = FormWindowState.Maximized;
+            menuMain.ResumeLayout(false);
+            menuMain.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -188,5 +184,6 @@
         private ToolStripMenuItem checkedListBoxToolStripMenuItem;
         private ToolStripMenuItem dateTimePickerToolStripMenuItem;
         private ToolStripMenuItem timerToolStripMenuItem;
+        private ToolStripMenuItem numericUpDownToolStripMenuItem;
     }
 }
