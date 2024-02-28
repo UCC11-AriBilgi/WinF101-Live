@@ -42,6 +42,8 @@
             dateTimePickerToolStripMenuItem = new ToolStripMenuItem();
             timerToolStripMenuItem = new ToolStripMenuItem();
             numericUpDownToolStripMenuItem = new ToolStripMenuItem();
+            listBoxTransferToolStripMenuItem = new ToolStripMenuItem();
+            dateDifferToolStripMenuItem = new ToolStripMenuItem();
             menuMain.SuspendLayout();
             SuspendLayout();
             // 
@@ -110,7 +112,7 @@
             // 
             // kontrollerToolStripMenuItem
             // 
-            kontrollerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkControlsToolStripMenuItem, checkedListBoxToolStripMenuItem, dateTimePickerToolStripMenuItem, timerToolStripMenuItem, numericUpDownToolStripMenuItem });
+            kontrollerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkControlsToolStripMenuItem, checkedListBoxToolStripMenuItem, dateTimePickerToolStripMenuItem, timerToolStripMenuItem, numericUpDownToolStripMenuItem, listBoxTransferToolStripMenuItem, dateDifferToolStripMenuItem });
             kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
             kontrollerToolStripMenuItem.Size = new Size(71, 20);
             kontrollerToolStripMenuItem.Text = "Kontroller";
@@ -150,6 +152,20 @@
             numericUpDownToolStripMenuItem.Text = "NumericUpDown";
             numericUpDownToolStripMenuItem.Click += numericUpDownToolStripMenuItem_Click;
             // 
+            // listBoxTransferToolStripMenuItem
+            // 
+            listBoxTransferToolStripMenuItem.Name = "listBoxTransferToolStripMenuItem";
+            listBoxTransferToolStripMenuItem.Size = new Size(180, 22);
+            listBoxTransferToolStripMenuItem.Text = "ListBoxTransfer";
+            listBoxTransferToolStripMenuItem.Click += listBoxTransferToolStripMenuItem_Click;
+            // 
+            // dateDifferToolStripMenuItem
+            // 
+            dateDifferToolStripMenuItem.Name = "dateDifferToolStripMenuItem";
+            dateDifferToolStripMenuItem.Size = new Size(180, 22);
+            dateDifferToolStripMenuItem.Text = "DateDiffer";
+            dateDifferToolStripMenuItem.Click += dateDifferToolStripMenuItem_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -185,5 +201,7 @@
         private ToolStripMenuItem dateTimePickerToolStripMenuItem;
         private ToolStripMenuItem timerToolStripMenuItem;
         private ToolStripMenuItem numericUpDownToolStripMenuItem;
+        private ToolStripMenuItem listBoxTransferToolStripMenuItem;
+        private ToolStripMenuItem dateDifferToolStripMenuItem;
     }
 }

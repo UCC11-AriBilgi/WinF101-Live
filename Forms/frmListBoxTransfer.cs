@@ -31,17 +31,14 @@ namespace Forms
 
                 foreach (var item in secilenler)
                 {
-                    lboxDest.Items.Add(item);
-                    lboxSource.Items.Remove(item);
+                    lbDest.Items.Add(item);
+                    lbSource.Items.Remove(item);
                 }
             }
             catch (Exception e)
             {
-                MessageBox.Show("Tasıma için seçim yapmalısınız" + e.Message);
+                MessageBox.Show("Tasıma için seçim yapmalısınız.." + e.Message);
             }
-
-
-
 
         }
 
@@ -54,9 +51,43 @@ namespace Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // source -> dest e tasıyan buton
+            // source -> dest e tasıyan buton...secılıleri soldan sağa..
 
-            Gonder(lboxSource,lboxDest);
+            Gonder(lboxSource, lboxDest);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //  source -> dest tasıyor..bir anda hepsini
+
+            foreach (var item in lboxSource.Items)
+            {
+                lboxDest.Items.Add(item);
+
+            }
+
+            lboxSource.Items.Clear();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // dest -> source tasıması sağdan sola tasıma
+            Gonder(lboxDest, lboxSource);
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // dest -> source tasıma hepsini
+            foreach (var item in lboxDest.Items)
+            {
+                lboxSource.Items.Add(item);
+
+            }
+
+            lboxDest.Items.Clear();
+
         }
     }
 }

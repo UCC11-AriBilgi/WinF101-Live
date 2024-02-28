@@ -28,83 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btonClose = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tboxAdSoyad = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpCalendar = new System.Windows.Forms.DateTimePicker();
-            this.btonGoster = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            btonClose = new Button();
+            label1 = new Label();
+            tboxAdSoyad = new TextBox();
+            label2 = new Label();
+            dtpCalendar = new DateTimePicker();
+            btonGoster = new Button();
+            SuspendLayout();
             // 
             // btonClose
             // 
-            this.btonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btonClose.Location = new System.Drawing.Point(310, 293);
-            this.btonClose.Name = "btonClose";
-            this.btonClose.Size = new System.Drawing.Size(75, 23);
-            this.btonClose.TabIndex = 0;
-            this.btonClose.Text = "Kapat";
-            this.btonClose.UseVisualStyleBackColor = true;
-            this.btonClose.Click += new System.EventHandler(this.btonClose_Click);
+            btonClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btonClose.Location = new Point(265, 174);
+            btonClose.Name = "btonClose";
+            btonClose.Size = new Size(75, 23);
+            btonClose.TabIndex = 0;
+            btonClose.Text = "Kapat";
+            btonClose.UseVisualStyleBackColor = true;
+            btonClose.Click += btonClose_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ad Soyad";
+            label1.AutoSize = true;
+            label1.Location = new Point(27, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(57, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Ad Soyad";
             // 
             // tboxAdSoyad
             // 
-            this.tboxAdSoyad.Location = new System.Drawing.Point(134, 21);
-            this.tboxAdSoyad.Name = "tboxAdSoyad";
-            this.tboxAdSoyad.Size = new System.Drawing.Size(100, 23);
-            this.tboxAdSoyad.TabIndex = 2;
+            tboxAdSoyad.Location = new Point(134, 21);
+            tboxAdSoyad.Name = "tboxAdSoyad";
+            tboxAdSoyad.Size = new Size(100, 23);
+            tboxAdSoyad.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Doğum Tarihiniz.";
+            label2.AutoSize = true;
+            label2.Location = new Point(27, 65);
+            label2.Name = "label2";
+            label2.Size = new Size(96, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Doğum Tarihiniz.";
             // 
             // dtpCalendar
             // 
-            this.dtpCalendar.Location = new System.Drawing.Point(135, 61);
-            this.dtpCalendar.Name = "dtpCalendar";
-            this.dtpCalendar.Size = new System.Drawing.Size(200, 23);
-            this.dtpCalendar.TabIndex = 4;
+            dtpCalendar.Location = new Point(135, 61);
+            dtpCalendar.Name = "dtpCalendar";
+            dtpCalendar.Size = new Size(200, 23);
+            dtpCalendar.TabIndex = 4;
             // 
             // btonGoster
             // 
-            this.btonGoster.Location = new System.Drawing.Point(27, 129);
-            this.btonGoster.Name = "btonGoster";
-            this.btonGoster.Size = new System.Drawing.Size(75, 23);
-            this.btonGoster.TabIndex = 5;
-            this.btonGoster.Text = "Göster";
-            this.btonGoster.UseVisualStyleBackColor = true;
-            this.btonGoster.Click += new System.EventHandler(this.btonGoster_Click);
+            btonGoster.Location = new Point(27, 129);
+            btonGoster.Name = "btonGoster";
+            btonGoster.Size = new Size(75, 23);
+            btonGoster.TabIndex = 5;
+            btonGoster.Text = "Göster";
+            btonGoster.UseVisualStyleBackColor = true;
+            btonGoster.Click += btonGoster_Click;
             // 
             // frmDateTimePicker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 328);
-            this.Controls.Add(this.btonGoster);
-            this.Controls.Add(this.dtpCalendar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.tboxAdSoyad);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btonClose);
-            this.Name = "frmDateTimePicker";
-            this.Text = "frmDateTimePicker";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(352, 209);
+            Controls.Add(btonGoster);
+            Controls.Add(dtpCalendar);
+            Controls.Add(label2);
+            Controls.Add(tboxAdSoyad);
+            Controls.Add(label1);
+            Controls.Add(btonClose);
+            Name = "frmDateTimePicker";
+            Text = "frmDateTimePicker";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

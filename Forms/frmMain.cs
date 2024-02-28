@@ -94,5 +94,19 @@ namespace Forms
 
             frmNumericUD.ShowDialog();
         }
+
+        private void listBoxTransferToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListBoxTransfer frmListBoxTransfer = new frmListBoxTransfer();
+
+            frmListBoxTransfer.ShowDialog();
+        }
+
+        private void dateDifferToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDateDiffer frmDateDiffer= new frmDateDiffer();
+
+            frmDateDiffer.ShowDialog();
+        }
     }
 }
