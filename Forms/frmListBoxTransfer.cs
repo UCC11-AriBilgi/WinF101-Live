@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Forms
+{
+    public partial class frmListBoxTransfer : Form
+    {
+        public frmListBoxTransfer()
+        {
+            InitializeComponent();
+        }
+
+        #region Ortak Metot
+        private void Gonder(ListBox lbSource, ListBox lbDest)
+        {
+            // Öncelikle acaba lbSource parametresiyle gelen listboxımda aca hangi elemanlar seçilmiş
+
+            try
+            {
+                ArrayList secilenler = new ArrayList();
+
+                secilenler.AddRange(lbSource.SelectedItems);
+
+                foreach (var item in secilenler)
+                {
+                    lboxDest.Items.Add(item);
+                    lboxSource.Items.Remove(item);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Tasıma için seçim yapmalısınız" + e.Message);
+            }
+
+
+
+
+        }
+
+        #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // source -> dest e tasıyan buton
+
+            Gonder(lboxSource,lboxDest);
+        }
+    }
+}
