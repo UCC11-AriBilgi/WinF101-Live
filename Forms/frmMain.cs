@@ -64,7 +64,30 @@ namespace Forms
 
         private void çıkışToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (Onay()==true)
+            {
+                Application.Exit();
+            }
+
+        }
+
+        private bool Onay()
+        {
+            bool secim = false;
+
+            DialogResult dialogResult= MessageBox.Show("Programdan çıkmak istiyor musunuz?","Onay",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                secim= true;
+
+            }
+            else 
+            { 
+                secim = false; 
+            }
+
+            return secim;
         }
 
         private void checkedListBoxToolStripMenuItem_Click(object sender, EventArgs e)
