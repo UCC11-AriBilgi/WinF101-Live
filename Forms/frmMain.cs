@@ -19,7 +19,10 @@ namespace Forms
 
         private void btonExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (Onay() == true)
+            {
+                Application.Exit();
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
