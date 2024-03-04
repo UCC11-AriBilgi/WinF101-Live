@@ -32,9 +32,9 @@
             menuStrip1 = new MenuStrip();
             dBBağlanToolStripMenuItem = new ToolStripMenuItem();
             dBBağlanToolStripMenuItem1 = new ToolStripMenuItem();
-            button1 = new Button();
             formlarToolStripMenuItem = new ToolStripMenuItem();
             employeesToolStripMenuItem = new ToolStripMenuItem();
+            button1 = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,19 +69,9 @@
             // dBBağlanToolStripMenuItem1
             // 
             dBBağlanToolStripMenuItem1.Name = "dBBağlanToolStripMenuItem1";
-            dBBağlanToolStripMenuItem1.Size = new Size(180, 22);
+            dBBağlanToolStripMenuItem1.Size = new Size(125, 22);
             dBBağlanToolStripMenuItem1.Text = "DBBağlan";
             dBBağlanToolStripMenuItem1.Click += dBBağlanToolStripMenuItem1_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(12, 415);
-            button1.Name = "button1";
-            button1.Size = new Size(142, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Bağlantıyı Kapat";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // formlarToolStripMenuItem
             // 
@@ -95,6 +85,17 @@
             employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
             employeesToolStripMenuItem.Size = new Size(180, 22);
             employeesToolStripMenuItem.Text = "Employees";
+            employeesToolStripMenuItem.Click += employeesToolStripMenuItem_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(12, 415);
+            button1.Name = "button1";
+            button1.Size = new Size(142, 23);
+            button1.TabIndex = 2;
+            button1.Text = "Bağlantıyı Kapat";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // frmMain
             // 
@@ -107,6 +108,7 @@
             MainMenuStrip = menuStrip1;
             Name = "frmMain";
             Text = "Form1";
+            WindowState = FormWindowState.Maximized;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

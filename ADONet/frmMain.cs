@@ -3,7 +3,7 @@ using Microsoft.Data.SqlClient;
 
 namespace ADONet
 {
-    
+
     public partial class frmMain : Form
     {
         static string vs_ConnStr = "Server=BASAE;Database=Northwind;Trusted_Connection=True;Integrated Security=true;TrustServerCertificate=true;";
@@ -64,6 +64,13 @@ namespace ADONet
                 MessageBox.Show(ex.Message);
                 throw;
             }
+        }
+
+        private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEmployee frmEmployee = new frmEmployee();
+
+            frmEmployee.ShowDialog();
         }
     }
 }
