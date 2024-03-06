@@ -207,7 +207,10 @@ namespace ADONet
                 }
                 else
                 {
-                    sqlstr = string.Format("UPDATE Employees SET FirstName='{0}',LastName='{1}',Title='{2}',City='{3}',Country='{4}' WHERE EmployeeID={5})", tboxFName.Text, tboxLName.Text, tboxTitle.Text, tboxCity.Text, tboxCountry.Text,tboxEmployeeID.Text);
+                    sqlstr = string.Format("UPDATE Employees SET FirstName='{0}',LastName='{1}',Title='{2}',City='{3}',Country='{4}' WHERE EmployeeID={5}", tboxFName.Text, tboxLName.Text, tboxTitle.Text, tboxCity.Text, tboxCountry.Text,tboxEmployeeID.Text);
+
+                    dataReader.Close();
+
 
                     ExecuteDML();
 
