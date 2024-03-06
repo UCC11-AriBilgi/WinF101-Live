@@ -67,9 +67,9 @@ namespace ADONet
 
         private void GetEmployeeForm(object sender, EventArgs e)
         {
-            frmEmployee frmEmployee = new frmEmployee();
+            frmEmployees frmEmployees = new frmEmployees();
 
-            frmEmployee.ShowDialog();
+            frmEmployees.ShowDialog();
         }
     }
 }

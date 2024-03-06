@@ -19,7 +19,7 @@ namespace ADONet
         SqlConnection conn = new SqlConnection(vs_ConnStr);
         SqlCommand cmd = new SqlCommand();
         SqlDataReader dataReader;
-        string sqlstr;
+        string sqlstr; // sql deyimlerini tutacak değişgen
 
 
         public frmEmployees()
@@ -38,22 +38,49 @@ namespace ADONet
 
             conn.Open(); // bağlantıyı acıyorum
 
-            FormInit(); // formun bazı kontrollerin ayarlamaları
+            FormInit(true); // formun bazı kontrollerin ayarlamaları
 
+            LoadData(); // veriyi yüklemek ve göstermek için
         }
 
-        private void FormInit()
+        private void FormInit(Boolean pStatus)
         {
-            tboxEmployeeID.ReadOnly= true;
-            tboxFName.ReadOnly= true;
-            tboxLName.ReadOnly= true;
-            tboxTitle.ReadOnly= true;
-            tboxCity.ReadOnly= true;
-            tboxCountry.ReadOnly= true;
+            tboxEmployeeID.Clear();
+            tboxFName.Clear();
+            tboxLName.Clear();
+            tboxTitle.Clear();
+            tboxCity.Clear();
+            tboxCountry.Clear();
 
-            btonInsert.Enabled = false;
-            btonUpdate.Enabled = false;
-            btonDelete.Enabled = false;
+            if (pStatus == true)
+            {
+                tboxEmployeeID.ReadOnly = true;
+                tboxFName.ReadOnly = true;
+                tboxLName.ReadOnly = true;
+                tboxTitle.ReadOnly = true;
+                tboxCity.ReadOnly = true;
+                tboxCountry.ReadOnly = true;
+
+                btonInsert.Enabled = false;
+                btonUpdate.Enabled = false;
+                btonDelete.Enabled = false;
+            }
+            else
+            {
+                tboxFName.ReadOnly = false;
+                tboxLName.ReadOnly = false;
+                tboxTitle.ReadOnly = false;
+                tboxCity.ReadOnly = false;
+                tboxCountry.ReadOnly = false;
+
+                btonInsert.Enabled = true;
+                //btonUpdate.Enabled = true;
+                //btonDelete.Enabled = true;
+            }
+
+
+
+
 
         }
 
@@ -70,7 +97,7 @@ namespace ADONet
 
         private void ShowData()
         {
-            if(dataReader.Read()) // Okuyabildiği sürece kontrollerin içini dolduracak.
+            if (dataReader.Read()) // Okuyabildiği sürece kontrollerin içini dolduracak.
             {
                 tboxEmployeeID.Text = dataReader[0].ToString();
                 tboxFName.Text = dataReader[1].ToString();
@@ -82,6 +109,55 @@ namespace ADONet
             else
             {
                 MessageBox.Show("Gösterilecek herhangi bir veri bulunamadı..");
+            }
+        }
+
+        private void btonNext_Click(object sender, EventArgs e)
+        {
+            ShowData();
+        }
+
+        private void btonNew_Click(object sender, EventArgs e)
+        {
+            // Burası yeni bir kayıt için gerekli bilgileri alır
+
+            // Önce temizleme harekatı
+            FormInit(false);
+
+            cmd.CommandText = "SELECT ISNULL(MAX(EmployeeID),1000)+1 FROM Employees";
+
+            dataReader.Close();
+
+            tboxEmployeeID.Text = cmd.ExecuteScalar().ToString();
+
+            tboxFName.Focus();
+        }
+
+        private void btonInsert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // db tarafındaki ilgili tablonun kısıtlamalarına göre kontroller
+                if (tboxFName.Text == "")
+                {
+                    MessageBox.Show("Ad alanın boş olamaz...");
+                }
+                else if (tboxLName.Text=="")
+                {
+                    MessageBox.Show("Soyad alanı boş olamaz...");
+                }
+                else
+                {
+                    sqlstr = string.Format("INSERT INTO Employees (FirstName,LastName,Title,City,Country) VALUES ('{0}','{1}','{2}','{3}','{4}')",tboxFName.Text,tboxLName.Text,tboxTitle.Text,tboxCity.Text,tboxCountry.Text);
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

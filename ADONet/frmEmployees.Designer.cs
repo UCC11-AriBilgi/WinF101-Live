@@ -163,6 +163,7 @@
             btonNext.TabIndex = 13;
             btonNext.Text = "Sonraki";
             btonNext.UseVisualStyleBackColor = true;
+            btonNext.Click += btonNext_Click;
             // 
             // btonNew
             // 
@@ -172,6 +173,7 @@
             btonNew.TabIndex = 14;
             btonNew.Text = "Yeni";
             btonNew.UseVisualStyleBackColor = true;
+            btonNew.Click += btonNew_Click;
             // 
             // btonInsert
             // 
@@ -181,6 +183,7 @@
             btonInsert.TabIndex = 15;
             btonInsert.Text = "Insert";
             btonInsert.UseVisualStyleBackColor = true;
+            btonInsert.Click += btonInsert_Click;
             // 
             // btonUpdate
             // 
