@@ -149,15 +149,38 @@ namespace ADONet
                 else
                 {
                     sqlstr = string.Format("INSERT INTO Employees (FirstName,LastName,Title,City,Country) VALUES ('{0}','{1}','{2}','{3}','{4}')",tboxFName.Text,tboxLName.Text,tboxTitle.Text,tboxCity.Text,tboxCountry.Text);
+
+                    ExecuteDML();
+
+                    btonInsert.Enabled = false;
+
+                    LoadData();
+
                 }
-
-
-
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-                throw;
+        private void ExecuteDML()
+        {
+            DialogResult dr=MessageBox.Show("İlgili SQL komutunu çalıştırmak istiyor musunuz? " + sqlstr,"Onay",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+
+            if (dr == DialogResult.Yes)
+            {
+                cmd.CommandText = sqlstr;
+
+                int count= cmd.ExecuteNonQuery();
+
+                if (count > 0)
+                {
+                    MessageBox.Show("İşlem basarılı...");
+                }
+                else
+                    MessageBox.Show("Bir problem var...");
             }
         }
     }
