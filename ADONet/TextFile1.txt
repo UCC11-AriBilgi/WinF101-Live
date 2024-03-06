@@ -1,0 +1,5 @@
+﻿        static string vs_ConnStr = "Server=BASAE;Database=Northwind;Trusted_Connection=True;Integrated Security=true;TrustServerCertificate=true;";
+
+        // Tanıma göre bağlanmak için gerekli talimatları aldı
+        SqlConnection connection = new SqlConnection(vs_ConnStr);
+        SqlCommand SqlCommand = new SqlCommand();
