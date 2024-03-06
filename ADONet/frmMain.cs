@@ -1,4 +1,4 @@
-
+ï»¿
 using Microsoft.Data.SqlClient;
 
 namespace ADONet
@@ -8,7 +8,7 @@ namespace ADONet
     {
         static string vs_ConnStr = "Server=BASAE;Database=Northwind;Trusted_Connection=True;Integrated Security=true;TrustServerCertificate=true;";
 
-        // Tanıma göre bağlanmak için gerekli talimatları aldı
+        // TanÃ½ma gÃ¶re baÄŸlanmak iÃ§in gerekli talimatlarÃ½ aldÃ½
         SqlConnection connection = new SqlConnection(vs_ConnStr);
 
 
@@ -22,29 +22,29 @@ namespace ADONet
             Application.Exit();
         }
 
-        private void dBBağlanToolStripMenuItem_Click(object sender, EventArgs e)
+        private void dBBaÄŸlanToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void dBBağlanToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void dBBaÄŸlanToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            // Bir DBye bağlanabilmek için iki şeye ihtiyacım var
-            // 1. ConnectionString dediğimiz bir string değer
-            // 2. Bunu anlayacak bir kütüphaneye ihtiyaç
+            // Bir DBye baÄŸlanabilmek iÃ§in iki Ã¾eye ihtiyacÃ½m var
+            // 1. ConnectionString dediÄŸimiz bir string deÄŸer
+            // 2. Bunu anlayacak bir kÃ¼tÃ¼phaneye ihtiyaÃ§
 
-            //// Tanıma göre bağlanmak için gerekli talimatları aldı
+            //// TanÃ½ma gÃ¶re baÄŸlanmak iÃ§in gerekli talimatlarÃ½ aldÃ½
 
 
             try
             {
-                connection.Open(); // bağlantıyı aç..
+                connection.Open(); // baÄŸlantÃ½yÃ½ aÃ§..
 
-                MessageBox.Show("VT bağlantısı açıldı...");
+                MessageBox.Show("VT baÄŸlantÃ½sÃ½ aÃ§Ã½ldÃ½...");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("VT bağlantısında problem var...");
+                MessageBox.Show("VT baÄŸlantÃ½sÃ½nda problem var...");
                 MessageBox.Show(ex.Message);
 
             }
@@ -57,7 +57,7 @@ namespace ADONet
             try
             {
                 connection.Close();
-                MessageBox.Show("Bağlantı kapandı");
+                MessageBox.Show("BaÄŸlantÃ½ kapandÃ½");
             }
             catch (Exception ex)
             {
