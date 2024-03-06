@@ -46,6 +46,7 @@
             btonInsert = new Button();
             btonUpdate = new Button();
             btonDelete = new Button();
+            btonGuncelle = new Button();
             SuspendLayout();
             // 
             // btonClose
@@ -193,6 +194,7 @@
             btonUpdate.TabIndex = 16;
             btonUpdate.Text = "Update";
             btonUpdate.UseVisualStyleBackColor = true;
+            btonUpdate.Click += btonUpdate_Click;
             // 
             // btonDelete
             // 
@@ -203,11 +205,22 @@
             btonDelete.Text = "Delete";
             btonDelete.UseVisualStyleBackColor = true;
             // 
+            // btonGuncelle
+            // 
+            btonGuncelle.Location = new Point(259, 95);
+            btonGuncelle.Name = "btonGuncelle";
+            btonGuncelle.Size = new Size(75, 23);
+            btonGuncelle.TabIndex = 18;
+            btonGuncelle.Text = "Güncelle";
+            btonGuncelle.UseVisualStyleBackColor = true;
+            btonGuncelle.Click += btonGuncelle_Click;
+            // 
             // frmEmployees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(344, 348);
+            Controls.Add(btonGuncelle);
             Controls.Add(btonDelete);
             Controls.Add(btonUpdate);
             Controls.Add(btonInsert);
@@ -253,5 +266,6 @@
         private Button btonInsert;
         private Button btonUpdate;
         private Button btonDelete;
+        private Button btonGuncelle;
     }
 }

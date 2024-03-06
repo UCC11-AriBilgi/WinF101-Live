@@ -45,15 +45,18 @@ namespace ADONet
 
         private void FormInit(Boolean pStatus)
         {
-            tboxEmployeeID.Clear();
-            tboxFName.Clear();
-            tboxLName.Clear();
-            tboxTitle.Clear();
-            tboxCity.Clear();
-            tboxCountry.Clear();
+
 
             if (pStatus == true)
             {
+                tboxEmployeeID.Clear();
+                tboxFName.Clear();
+                tboxLName.Clear();
+                tboxTitle.Clear();
+                tboxCity.Clear();
+                tboxCountry.Clear();
+
+
                 tboxEmployeeID.ReadOnly = true;
                 tboxFName.ReadOnly = true;
                 tboxLName.ReadOnly = true;
@@ -74,8 +77,8 @@ namespace ADONet
                 tboxCountry.ReadOnly = false;
 
                 btonInsert.Enabled = true;
-                //btonUpdate.Enabled = true;
-                //btonDelete.Enabled = true;
+                btonUpdate.Enabled = true;
+                btonDelete.Enabled = true;
             }
 
 
@@ -142,13 +145,13 @@ namespace ADONet
                 {
                     MessageBox.Show("Ad alanın boş olamaz...");
                 }
-                else if (tboxLName.Text=="")
+                else if (tboxLName.Text == "")
                 {
                     MessageBox.Show("Soyad alanı boş olamaz...");
                 }
                 else
                 {
-                    sqlstr = string.Format("INSERT INTO Employees (FirstName,LastName,Title,City,Country) VALUES ('{0}','{1}','{2}','{3}','{4}')",tboxFName.Text,tboxLName.Text,tboxTitle.Text,tboxCity.Text,tboxCountry.Text);
+                    sqlstr = string.Format("INSERT INTO Employees (FirstName,LastName,Title,City,Country) VALUES ('{0}','{1}','{2}','{3}','{4}')", tboxFName.Text, tboxLName.Text, tboxTitle.Text, tboxCity.Text, tboxCountry.Text);
 
                     ExecuteDML();
 
@@ -166,14 +169,14 @@ namespace ADONet
 
         private void ExecuteDML()
         {
-            DialogResult dr=MessageBox.Show("İlgili SQL komutunu çalıştırmak istiyor musunuz? " + sqlstr,"Onay",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("İlgili SQL komutunu çalıştırmak istiyor musunuz? " + sqlstr, "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
 
             if (dr == DialogResult.Yes)
             {
                 cmd.CommandText = sqlstr;
 
-                int count= cmd.ExecuteNonQuery();
+                int count = cmd.ExecuteNonQuery();
 
                 if (count > 0)
                 {
@@ -181,6 +184,42 @@ namespace ADONet
                 }
                 else
                     MessageBox.Show("Bir problem var...");
+            }
+        }
+
+        private void btonGuncelle_Click(object sender, EventArgs e)
+        {
+            FormInit(false);
+        }
+
+        private void btonUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // db tarafındaki ilgili tablonun kısıtlamalarına göre kontroller
+                if (tboxFName.Text == "")
+                {
+                    MessageBox.Show("Ad alanın boş olamaz...");
+                }
+                else if (tboxLName.Text == "")
+                {
+                    MessageBox.Show("Soyad alanı boş olamaz...");
+                }
+                else
+                {
+                    sqlstr = string.Format("UPDATE Employees SET FirstName='{0}',LastName='{1}',Title='{2}',City='{3}',Country='{4}' WHERE EmployeeID={5})", tboxFName.Text, tboxLName.Text, tboxTitle.Text, tboxCity.Text, tboxCountry.Text,tboxEmployeeID.Text);
+
+                    ExecuteDML();
+
+                    btonInsert.Enabled = false;
+
+                    LoadData();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
