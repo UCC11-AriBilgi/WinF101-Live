@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
 namespace ADONet
 {
@@ -15,8 +16,6 @@ namespace ADONet
         // Tüm uygulama dahilinde geçerli olması için değişgenlerimi burada yaratıyorum
 
         string vs_ConnStr = @"Server = PHOKAIA\SS2019DE ; Database = Northwind; user id=sa;password=Doga251200; Trusted_Connection = False;Encrypt=false;"; // Connection String : veritabanına bağlanma için
-
-
         string vs_SQLCommand; // SQL Command : SQL tarafın çalışacak SQL Komutları
 
         public frmCustomers()
@@ -35,6 +34,8 @@ namespace ADONet
 
             // İlk önce DG mi ayarlayacağım
             PrepareGrid();
+
+            BindGrid();
 
         }
 
@@ -81,6 +82,33 @@ namespace ADONet
             dgrdCustomers.Columns[3].Name = "Country";
             dgrdCustomers.Columns[3].HeaderText = "Country";
             dgrdCustomers.Columns[3].DataPropertyName    = "Country";
+
+        }
+
+        private void BindGrid()
+        {
+            // VT tarafındaki bilginin alınıp DG içinde gösterilmesini sağlıyacak
+            vs_SQLCommand = "SELECT * FROM Customers";
+
+            using (SqlConnection connection= new SqlConnection(vs_ConnStr)) // Bağlantı
+            {
+                using (SqlCommand command = new SqlCommand(vs_SQLCommand, connection)) // Komut tarafı
+                {
+                    command.CommandType = CommandType.Text;
+
+                    using (SqlDataAdapter adapter= new SqlDataAdapter(command))  // Adaptör kısmı
+                    { 
+                        using(DataSet dset=new DataSet()) // Verilerim
+                        {
+                            adapter.Fill(dset);
+
+                            dgrdCustomers.DataSource = dset.Tables[0]; // vt tarafından alınan veri DG içinde gösterilmek için
+
+                        }
+                    }
+
+                }
+            }
 
         }
     }
