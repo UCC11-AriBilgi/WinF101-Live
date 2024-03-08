@@ -31,10 +31,10 @@
             btonExit = new Button();
             menuStrip1 = new MenuStrip();
             dBBağlanToolStripMenuItem = new ToolStripMenuItem();
-            formlarToolStripMenuItem = new ToolStripMenuItem();
-            employeesToolStripMenuItem = new ToolStripMenuItem();
             programToolStripMenuItem = new ToolStripMenuItem();
             dBConnectToolStripMenuItem = new ToolStripMenuItem();
+            formlarToolStripMenuItem = new ToolStripMenuItem();
+            employeesToolStripMenuItem = new ToolStripMenuItem();
             dBBaglanToolStripMenuItem1 = new ToolStripMenuItem();
             button1 = new Button();
             menuStrip1.SuspendLayout();
@@ -43,10 +43,9 @@
             // btonExit
             // 
             btonExit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btonExit.Location = new Point(536, 553);
-            btonExit.Margin = new Padding(3, 4, 3, 4);
+            btonExit.Location = new Point(469, 415);
             btonExit.Name = "btonExit";
-            btonExit.Size = new Size(86, 31);
+            btonExit.Size = new Size(75, 23);
             btonExit.TabIndex = 0;
             btonExit.Text = "Çıkış";
             btonExit.UseVisualStyleBackColor = true;
@@ -58,43 +57,42 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { dBBağlanToolStripMenuItem, programToolStripMenuItem, formlarToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(635, 30);
+            menuStrip1.Size = new Size(556, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // dBBağlanToolStripMenuItem
             // 
             dBBağlanToolStripMenuItem.Name = "dBBağlanToolStripMenuItem";
-            dBBağlanToolStripMenuItem.Size = new Size(14, 24);
-            // 
-            // formlarToolStripMenuItem
-            // 
-            formlarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { employeesToolStripMenuItem });
-            formlarToolStripMenuItem.Name = "formlarToolStripMenuItem";
-            formlarToolStripMenuItem.Size = new Size(74, 24);
-            formlarToolStripMenuItem.Text = "Formlar";
-            // 
-            // employeesToolStripMenuItem
-            // 
-            employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            employeesToolStripMenuItem.Size = new Size(224, 26);
-            employeesToolStripMenuItem.Text = "Employees";
-            employeesToolStripMenuItem.Click += GetEmployeeForm;
+            dBBağlanToolStripMenuItem.Size = new Size(12, 20);
             // 
             // programToolStripMenuItem
             // 
             programToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dBConnectToolStripMenuItem });
             programToolStripMenuItem.Name = "programToolStripMenuItem";
-            programToolStripMenuItem.Size = new Size(80, 24);
+            programToolStripMenuItem.Size = new Size(65, 20);
             programToolStripMenuItem.Text = "Program";
             // 
             // dBConnectToolStripMenuItem
             // 
             dBConnectToolStripMenuItem.Name = "dBConnectToolStripMenuItem";
-            dBConnectToolStripMenuItem.Size = new Size(224, 26);
+            dBConnectToolStripMenuItem.Size = new Size(134, 22);
             dBConnectToolStripMenuItem.Text = "DBConnect";
             dBConnectToolStripMenuItem.Click += Connect;
+            // 
+            // formlarToolStripMenuItem
+            // 
+            formlarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { employeesToolStripMenuItem });
+            formlarToolStripMenuItem.Name = "formlarToolStripMenuItem";
+            formlarToolStripMenuItem.Size = new Size(60, 20);
+            formlarToolStripMenuItem.Text = "Formlar";
+            // 
+            // employeesToolStripMenuItem
+            // 
+            employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
+            employeesToolStripMenuItem.Size = new Size(131, 22);
+            employeesToolStripMenuItem.Text = "Employees";
+            employeesToolStripMenuItem.Click += GetEmployeeForm;
             // 
             // dBBaglanToolStripMenuItem1
             // 
@@ -103,10 +101,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(14, 553);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(12, 415);
             button1.Name = "button1";
-            button1.Size = new Size(162, 31);
+            button1.Size = new Size(142, 23);
             button1.TabIndex = 2;
             button1.Text = "Bağlantıyı Kapat";
             button1.UseVisualStyleBackColor = true;
@@ -114,14 +111,13 @@
             // 
             // frmMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(635, 600);
+            ClientSize = new Size(556, 450);
             Controls.Add(button1);
             Controls.Add(btonExit);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmMain";
             Text = "Form1";
             WindowState = FormWindowState.Maximized;
