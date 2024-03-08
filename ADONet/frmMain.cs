@@ -71,5 +71,12 @@ namespace ADONet
 
             frmEmployees.ShowDialog();
         }
+
+        private void GetCustomersForm(object sender, EventArgs e)
+        {
+            frmCustomers frmCustomers= new frmCustomers();
+
+            frmCustomers.ShowDialog();
+        }
     }
 }
