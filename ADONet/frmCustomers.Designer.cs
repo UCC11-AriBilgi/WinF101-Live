@@ -40,7 +40,7 @@
             // btonClose
             // 
             btonClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btonClose.Location = new Point(1150, 582);
+            btonClose.Location = new Point(1097, 582);
             btonClose.Name = "btonClose";
             btonClose.Size = new Size(94, 29);
             btonClose.TabIndex = 0;
@@ -75,6 +75,7 @@
             btonAdd.TabIndex = 3;
             btonAdd.Text = "Ekle";
             btonAdd.UseVisualStyleBackColor = true;
+            btonAdd.Click += btonAdd_Click;
             // 
             // btonUpdate
             // 
@@ -84,6 +85,7 @@
             btonUpdate.TabIndex = 4;
             btonUpdate.Text = "Güncelle";
             btonUpdate.UseVisualStyleBackColor = true;
+            btonUpdate.Click += btonUpdate_Click;
             // 
             // btonDelete
             // 
@@ -98,7 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1256, 623);
+            ClientSize = new Size(1203, 623);
             Controls.Add(btonDelete);
             Controls.Add(btonUpdate);
             Controls.Add(btonAdd);

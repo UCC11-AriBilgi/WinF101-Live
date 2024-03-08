@@ -53,15 +53,15 @@ namespace ADONet
 
             // AutoSizeColumnsMode --> Fill kolonların genişlikleriyle ilgili
 
-            dgrdCustomers.AutoSizeColumnsMode= DataGridViewAutoSizeColumnsMode.Fill;
+            dgrdCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dgrdCustomers.RowHeadersVisible = false;
 
             dgrdCustomers.AllowUserToResizeRows = false;
 
-            dgrdCustomers.ReadOnly= false;
+            dgrdCustomers.ReadOnly = false;
 
-            dgrdCustomers.SelectionMode=DataGridViewSelectionMode.FullRowSelect;
+            dgrdCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             dgrdCustomers.ColumnCount = 4; // gösterilecek kolon sayısı
 
@@ -69,19 +69,19 @@ namespace ADONet
 
             dgrdCustomers.Columns[0].Name = "CustomerID";
             dgrdCustomers.Columns[0].HeaderText = "Customer ID";
-            dgrdCustomers.Columns[0].DataPropertyName    = "CustomerID";
-            
+            dgrdCustomers.Columns[0].DataPropertyName = "CustomerID";
+
             dgrdCustomers.Columns[1].Name = "CompanyName";
             dgrdCustomers.Columns[1].HeaderText = "Company Name";
-            dgrdCustomers.Columns[1].DataPropertyName    = "CompanyName";
-            
+            dgrdCustomers.Columns[1].DataPropertyName = "CompanyName";
+
             dgrdCustomers.Columns[2].Name = "ContactName";
             dgrdCustomers.Columns[2].HeaderText = "Contact Name";
-            dgrdCustomers.Columns[2].DataPropertyName    = "ContactName";
-            
+            dgrdCustomers.Columns[2].DataPropertyName = "ContactName";
+
             dgrdCustomers.Columns[3].Name = "Country";
             dgrdCustomers.Columns[3].HeaderText = "Country";
-            dgrdCustomers.Columns[3].DataPropertyName    = "Country";
+            dgrdCustomers.Columns[3].DataPropertyName = "Country";
 
         }
 
@@ -90,15 +90,15 @@ namespace ADONet
             // VT tarafındaki bilginin alınıp DG içinde gösterilmesini sağlıyacak
             vs_SQLCommand = "SELECT * FROM Customers";
 
-            using (SqlConnection connection= new SqlConnection(vs_ConnStr)) // Bağlantı
+            using (SqlConnection connection = new SqlConnection(vs_ConnStr)) // Bağlantı
             {
                 using (SqlCommand command = new SqlCommand(vs_SQLCommand, connection)) // Komut tarafı
                 {
                     command.CommandType = CommandType.Text;
 
-                    using (SqlDataAdapter adapter= new SqlDataAdapter(command))  // Adaptör kısmı
-                    { 
-                        using(DataSet dset=new DataSet()) // Verilerim
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))  // Adaptör kısmı
+                    {
+                        using (DataSet dset = new DataSet()) // Verilerim
                         {
                             adapter.Fill(dset);
 
@@ -110,6 +110,56 @@ namespace ADONet
                 }
             }
 
+        }
+
+        private void ShowData(string prmMod)
+        {
+            frmCustomerDetails frmCustomerDetails = new frmCustomerDetails();
+
+            frmCustomerDetails.Mod = prmMod;
+
+            // IUD olma moduna göre 2.formdaki bazı ayarlamaları yapacağım
+
+            switch (prmMod)
+            {
+                case "I": // Insert Modu
+                    frmCustomerDetails.tboxCustomerID.Enabled = true;
+                    frmCustomerDetails.tboxCustomerID.Text = "";
+                    frmCustomerDetails.tboxCompanyName.Text = "";
+                    frmCustomerDetails.tboxContactName.Text = "";
+                    frmCustomerDetails.tboxCountry.Text = "";
+
+                    break;
+                case "U": // Update Modu
+                    frmCustomerDetails.tboxCustomerID.Enabled = false;
+                    // DG üzerindeki bilgileri yerleştiriyorum
+                    frmCustomerDetails.tboxCustomerID.Text = dgrdCustomers.CurrentRow.Cells[0].Value.ToString();
+                    frmCustomerDetails.tboxCompanyName.Text = dgrdCustomers.CurrentRow.Cells[1].Value.ToString(); ;
+                    frmCustomerDetails.tboxContactName.Text = dgrdCustomers.CurrentRow.Cells[2].Value.ToString(); ;
+                    frmCustomerDetails.tboxCountry.Text = dgrdCustomers.CurrentRow.Cells[3].Value.ToString(); ;
+                    break;
+                default:
+                    break;
+            }
+
+            frmCustomerDetails.ShowDialog();
+
+
+
+        }
+
+        private void btonUpdate_Click(object sender, EventArgs e)
+        {
+            ShowData("U");
+
+            BindGrid();
+        }
+
+        private void btonAdd_Click(object sender, EventArgs e)
+        {
+            ShowData("I");
+
+            BindGrid();
         }
     }
 }
