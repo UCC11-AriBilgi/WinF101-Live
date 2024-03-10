@@ -82,7 +82,7 @@ namespace ADONet
 
                         command.ExecuteNonQuery(); // Command calışıyor
 
-                        MessageBox.Show("Bilgileriz veritabanına basarıyla kaydedildi...");
+                        MessageBox.Show("Bilgileriniz veritabanına basarıyla kaydedildi...");
 
                         this.Close();
                     }
