@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms", "Forms\Forms.csproj", "{FCE9E3A2-C9A3-4C86-A118-B2477E4B30C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADONet", "ADONet\ADONet.csproj", "{D3BBB4A1-D7BB-4A9C-9E30-8BFE444F2BD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADONet", "ADONet\ADONet.csproj", "{D3BBB4A1-D7BB-4A9C-9E30-8BFE444F2BD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
