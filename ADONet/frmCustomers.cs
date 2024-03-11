@@ -175,7 +175,7 @@ namespace ADONet
                     command.Parameters.AddWithValue("CustomerID", dgrdCustomers.CurrentRow.Cells[0].Value.ToString());
                     // dg deki 0.indexdeki bilgi parametre içine atanıyor.
 
-                    command.CommandType= CommandType.Text;
+                    command.CommandType = CommandType.Text;
 
                     try
                     {
@@ -184,18 +184,27 @@ namespace ADONet
                         command.ExecuteNonQuery();
 
                         MessageBox.Show("Bilginiz veritabanından basarıyla silindi....");
+
+                        BindGrid();
+
                     }
                     catch (Exception message)
                     {
                         MessageBox.Show("Hata : " + message.Message.ToString());
                     }
 
-
-
                 }
             }
 
 
+        }
+
+        private void dgrdCustomers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // dg üzerindeki bir hücreye çift tıklandığında beni direk Update modunda diğer forma atsın...
+
+            ShowData("U");
+            BindGrid();
         }
     }
 }

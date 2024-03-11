@@ -68,6 +68,7 @@
             dgrdCustomers.RowHeadersWidth = 51;
             dgrdCustomers.Size = new Size(1000, 295);
             dgrdCustomers.TabIndex = 2;
+            dgrdCustomers.CellContentDoubleClick += dgrdCustomers_CellContentDoubleClick;
             // 
             // btonAdd
             // 
