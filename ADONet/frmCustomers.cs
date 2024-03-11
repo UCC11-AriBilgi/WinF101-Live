@@ -15,7 +15,7 @@ namespace ADONet
     {
         // Tüm uygulama dahilinde geçerli olması için değişgenlerimi burada yaratıyorum
 
-        string vs_ConnStr = @"Server = PHOKAIA\SS2019DE ; Database = Northwind; user id=sa;password=Doga251200; Trusted_Connection = False;Encrypt=false;"; // Connection String : veritabanına bağlanma için
+        string vs_ConnStr = @"Server=BASAE;Database=Northwind;Trusted_Connection=True;Integrated Security=true;TrustServerCertificate=true;"; // Connection String : veritabanına bağlanma için
         string vs_SQLCommand; // SQL Command : SQL tarafın çalışacak SQL Komutları
 
         public frmCustomers()
@@ -160,6 +160,42 @@ namespace ADONet
             ShowData("I");
 
             BindGrid();
+        }
+
+        private void btonDelete_Click(object sender, EventArgs e)
+        {
+            vs_SQLCommand = "DELETE FROM Customers WHERE CustomerID=@CustomerID";
+
+            using (SqlConnection connection = new SqlConnection(vs_ConnStr)) // Bağlantı
+            {
+                using (SqlCommand command = new SqlCommand(vs_SQLCommand, connection)) // Komut tarafı
+                {
+                    // yani burası parametreleri ayarlayacak ve çalıştıracak
+
+                    command.Parameters.AddWithValue("CustomerID", dgrdCustomers.CurrentRow.Cells[0].Value.ToString());
+                    // dg deki 0.indexdeki bilgi parametre içine atanıyor.
+
+                    command.CommandType= CommandType.Text;
+
+                    try
+                    {
+                        connection.Open();
+
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show("Bilginiz veritabanından basarıyla silindi....");
+                    }
+                    catch (Exception message)
+                    {
+                        MessageBox.Show("Hata : " + message.Message.ToString());
+                    }
+
+
+
+                }
+            }
+
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace ADONet
     {
         // Tüm uygulama dahilinde geçerli olması için değişgenlerimi burada yaratıyorum
 
-        string vs_ConnStr = @"Server = PHOKAIA\SS2019DE ; Database = Northwind; user id=sa;password=Doga251200; Trusted_Connection = False;Encrypt=false;"; // Connection String : veritabanına bağlanma için
+        string vs_ConnStr = @"Server=BASAE;Database=Northwind;Trusted_Connection=True;Integrated Security=true;TrustServerCertificate=true;"; // Connection String : veritabanına bağlanma için
 
         string vs_SQLCommand; // SQL Command : SQL tarafın çalışacak SQL Komutları
 

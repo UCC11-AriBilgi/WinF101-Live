@@ -40,9 +40,10 @@
             // btonClose
             // 
             btonClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btonClose.Location = new Point(1097, 582);
+            btonClose.Location = new Point(960, 436);
+            btonClose.Margin = new Padding(3, 2, 3, 2);
             btonClose.Name = "btonClose";
-            btonClose.Size = new Size(94, 29);
+            btonClose.Size = new Size(82, 22);
             btonClose.TabIndex = 0;
             btonClose.Text = "Kapat";
             btonClose.UseVisualStyleBackColor = true;
@@ -52,26 +53,28 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label1.Location = new Point(23, 21);
+            label1.Location = new Point(20, 16);
             label1.Name = "label1";
-            label1.Size = new Size(195, 32);
+            label1.Size = new Size(152, 25);
             label1.TabIndex = 1;
             label1.Text = "Customers Data";
             // 
             // dgrdCustomers
             // 
             dgrdCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgrdCustomers.Location = new Point(32, 78);
+            dgrdCustomers.Location = new Point(28, 58);
+            dgrdCustomers.Margin = new Padding(3, 2, 3, 2);
             dgrdCustomers.Name = "dgrdCustomers";
             dgrdCustomers.RowHeadersWidth = 51;
-            dgrdCustomers.Size = new Size(1143, 393);
+            dgrdCustomers.Size = new Size(1000, 295);
             dgrdCustomers.TabIndex = 2;
             // 
             // btonAdd
             // 
-            btonAdd.Location = new Point(32, 499);
+            btonAdd.Location = new Point(28, 374);
+            btonAdd.Margin = new Padding(3, 2, 3, 2);
             btonAdd.Name = "btonAdd";
-            btonAdd.Size = new Size(94, 29);
+            btonAdd.Size = new Size(82, 22);
             btonAdd.TabIndex = 3;
             btonAdd.Text = "Ekle";
             btonAdd.UseVisualStyleBackColor = true;
@@ -79,9 +82,10 @@
             // 
             // btonUpdate
             // 
-            btonUpdate.Location = new Point(150, 499);
+            btonUpdate.Location = new Point(131, 374);
+            btonUpdate.Margin = new Padding(3, 2, 3, 2);
             btonUpdate.Name = "btonUpdate";
-            btonUpdate.Size = new Size(94, 29);
+            btonUpdate.Size = new Size(82, 22);
             btonUpdate.TabIndex = 4;
             btonUpdate.Text = "Güncelle";
             btonUpdate.UseVisualStyleBackColor = true;
@@ -89,24 +93,27 @@
             // 
             // btonDelete
             // 
-            btonDelete.Location = new Point(272, 499);
+            btonDelete.Location = new Point(238, 374);
+            btonDelete.Margin = new Padding(3, 2, 3, 2);
             btonDelete.Name = "btonDelete";
-            btonDelete.Size = new Size(94, 29);
+            btonDelete.Size = new Size(82, 22);
             btonDelete.TabIndex = 5;
             btonDelete.Text = "Sil";
             btonDelete.UseVisualStyleBackColor = true;
+            btonDelete.Click += btonDelete_Click;
             // 
             // frmCustomers
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1203, 623);
+            ClientSize = new Size(1053, 467);
             Controls.Add(btonDelete);
             Controls.Add(btonUpdate);
             Controls.Add(btonAdd);
             Controls.Add(dgrdCustomers);
             Controls.Add(label1);
             Controls.Add(btonClose);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmCustomers";
             Text = "frmCustomers";
             Load += frmCustomers_Load;
